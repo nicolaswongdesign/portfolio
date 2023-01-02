@@ -1,0 +1,888 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+.h1 {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 200px;
+    color: rgba(82,3,6);
+}
+h2 {
+    font-family: lato, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: rgba(82,3,6);
+}
+h3 {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color: white;
+}
+h4 {
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: white;
+}
+h5{
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+    color: rgba(82,3,6);
+}
+h6 {
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: black;
+    font-size: 60px;
+}
+.h7 {
+    font-family: acumin-pro-extra-condensed, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: rgba(82,3,6);
+    font-size: 350px;
+}
+.h8 {
+    font-family: acumin-pro-condensed, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color: rgba(82,3,6);
+    font-size: 250px;
+}
+.h9 {
+    font-family: montserrat, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    font-size: 40px;
+}
+p {
+    font-family: lato, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+}
+/* ------------------------- NAV ------------------------- */
+.navbar {
+    background-color: rgb(248, 241, 229);
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 20px 30px;
+    z-index: 3;
+    position: relative;
+}
+
+.divimg img {
+    height: 40px;
+    width: auto;
+    margin-right: auto;
+    margin-left: 10px;
+}
+.navbar ul {
+    list-style-type: none;
+}
+.navbar ul, .navbar ul li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.navbutton {
+    background-color:white;
+    padding: 5px 40px;
+    transition: .7s;
+}
+.navbutton a {
+    transition: .7s;
+}
+.navbutton:hover{
+    background-color:  rgba(82,3,6);
+    color: white;
+    box-shadow: -5px 5px 10px grey;
+}
+.navbutton:hover a{
+    color: white;
+}
+li a {
+    color:  rgba(82,3,6);
+    font-family: bebas-neue, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@media (max-width:900px) {
+    .navbar ul, .navbar ul li {
+        display: block;
+        text-align: left;
+    }
+    .divimg img {
+        height: 50px;
+    }
+    .navbutton {
+        padding: 5px 20px 5px 20px;
+    }
+}
+/* ------------------------- HERO ------------------------- */
+.hero {
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: url(images/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1080px;
+}
+.intro {
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    right: 1%;
+}
+@media (max-width:1000px) {
+    .h1 {
+        font-size: 140px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    * {
+        transition: all ease-in-out .5s;
+    }
+}
+
+/* ------------------------- BANNER & CARD ------------------------- */
+.banner {
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: url(images/Banner-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+}
+.frontcard {
+    background-color: rgb(112, 88, 72);
+    text-align: center;
+    position: relative;
+    margin: -100px 10% 0 10%;
+    padding: 20px 10% 50px 10%;
+}
+.backcard {
+    background-color: rgb(212, 177, 146);
+    opacity: 100%;
+    width: 1000px;
+    display: block;
+    background-position: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0 0 80px 0 ;
+}
+.bgcard {
+    background:linear-gradient(to bottom,rgb(23,23,23) 10%, white 100%);
+    padding: 0 0 10% 0;
+    display: flex;
+    background-position: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+.aboutbutton {
+    background-color:rgba(82,3,6);
+    padding: 0px 0;
+    margin: 0 25%;
+    transition: all .7s;
+}
+.aboutbutton:hover {
+    background-color: rgb(184, 66, 66);
+    box-shadow: 0px 5px 10px black;
+}
+.aboutbutton:hover h4{
+    color: rgb(255, 255, 255);
+}
+@media (max-width:1000px) {
+    .backcard {
+        width: 100%;
+    }
+    .frontcard {
+        width: 80%;
+        margin: -50px 10% 0 10%;
+    }
+    * {
+        transition: all ease-in-out .5s;
+    }
+    .portpre {
+        width: 100%;
+    }
+}
+@media (max-width:900px) {
+    .frontcard h3 {
+        font-size: 60px;
+    }
+    .banner {
+        height: 500px;
+    }
+    .hero {
+        height: 780px;
+    }
+    .frontcard {
+        width: 80%;
+        margin: -50px 10% 0 10%;
+    }
+    * {
+        transition: all ease-in-out .5s;
+    }
+}
+
+/* ------------------------- PORTFOLIO ------------------------- */
+
+.portpre {
+    padding: 0 0 10% 0;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+}
+.portpre img {
+    height: 150px;
+    width: auto;
+}
+.row1 {
+    opacity: 100%;
+    width: 1000px;
+    justify-content: space-between;
+    background-position: center;
+    padding: 0 0 80px 0 ;
+    display: inline-flex;
+}
+.row2 {
+    opacity: 100%;
+    width: 1000px;
+    justify-content: space-between;
+    background-position: center;
+    padding: 0 0 80px 0 ;
+    display: inline-flex;
+}
+.row2 h3 {
+    color: rgba(82,3,6);
+}
+.portbutton {
+    background-color:rgba(82,3,6);
+    padding: 10px 0;
+    margin: 0 0;
+    transition: all .7s;
+}
+.portbutton:hover {
+    background-color: rgb(184, 66, 66);
+    box-shadow: 0px 5px 10px black;
+}
+.portbutton:hover h4{
+    color: rgb(255, 255, 255);
+}
+.row3 {
+    display: inline-flex;
+    opacity: 100%;
+    width: 1000px;
+    justify-content:space-between;
+    background-position: center;
+    padding: 0 0 80px 0 ;
+}
+@media (max-width:900px) {
+
+    .row1, .row2, .row3 {
+        display:contents;
+        justify-content:center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 0 0;
+        margin: 0;
+    }
+    .portpre img {
+        width: 80%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .portpre {
+        padding-bottom: 200px;
+    }
+    .portclick {
+        margin: 20px 0 30px 0 ;
+    }
+    * {
+        transition: all ease-in-out .5s;
+    }
+    
+}
+/* ------------------------- FOOTER ------------------------- */
+.b4footer {
+    background:linear-gradient(to bottom,white 0%, rgb(196,173,149) 99%);
+    height: 300px;
+    width: 100%;
+    margin-top: -400px;
+}
+.b4footer2 {
+    background-color: rgb(196,173,149);
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    padding: 60px 10%;
+    text-align: center;
+    justify-content: center;
+}
+.footerbanner {
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: url(images/Chibis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 300px;
+}
+footer {
+    background-color: rgb(47, 47, 47);
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 5% 10% 0% 10%;
+}
+footer a:hover{
+    color: rgb(184, 66, 66);
+}
+footer ul{
+    list-style-type: none;
+}
+footer ul li a{
+    color: white;
+    font-family: lato, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+.pages1 {
+    margin-top: 15px;
+}
+.pages1 li{
+    padding: 10px 0;
+}
+.socials1, .socials2 {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.socials1 li, .socials2 li{
+    padding: 10px 0;
+}
+.socials2 {
+    margin-left: 20px;
+}
+.contact1 {
+    margin-top: 15px;
+}
+.contact1 li{
+    padding: 10px 0;
+}
+.copyright {
+    background-color: rgb(47, 47, 47);
+    display: inline-flex;
+    width: 100%;
+    padding: 3% 10% 5% 10%;
+}
+.copyright img {
+    height: 18px;
+    margin-left: 30px;
+    margin-top: 2px;
+    opacity: .8;
+    width: auto;
+}
+.copyright img:hover {
+    opacity: 1;
+}
+.copyright p {
+    color: white;
+    font-family: lato, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+@media (max-width:900px) {
+    footer {
+        display: block;
+        padding: 5% 10% 5% 15%;
+    }
+    .pages, .socials, .contact {
+        margin: 40px 0;
+    }
+    .copyright {
+        padding: 3% 10% 5% 15%;
+        display: block;
+    }
+    .copyright img {
+        display: inline;
+        margin-top: 40px;
+        margin-right: 30px;
+        margin-left: 0;
+    }
+
+}
+/* ------------------------- - ------------------------- 2 ------------------------- - ------------------------- */
+
+/* ------------------------- HERO ------------------------- */
+.heroabout {
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: url(images/PortraitsBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    top: 0;
+    height: 1080px;
+    cursor: default;
+}
+.aboutnameBG {
+    display: flex;
+    margin-left: 60px;
+    margin-top: -60px;
+    position:absolute;
+}
+.aboutnameBG2 {
+    display: flex;
+    margin-left: auto;
+    right: 60px;
+    margin-top: 250px;
+    position:absolute;
+}
+.abouttop {
+    display: flex;
+    margin-left: 70px;
+    margin-top: 0px;
+    position:relative;
+    padding-top: 380px;
+}
+.heroabout img {
+    display: flex;
+    position: absolute;
+    height: 1080px;
+    width: auto;
+    margin: auto;
+    right: 20%;
+    left: auto;
+}
+.maindes {
+    height: auto;
+    background-color: white;
+    padding: 10% 10%;
+}
+@media (max-width:1100px) {
+    .abouttop {
+        padding-top: 530px;
+    }
+    .aboutnameBG2 {
+        margin-left: 60px;
+        right: auto;
+    }
+    .h7 {
+        font-size: 300px;
+    }
+    .h8 {
+        font-size: 200px;
+    }
+    .heroabout img{
+        height: 1080px;
+        left: auto;
+        right: 0%;
+    }
+    * {
+        transition: all .5s;
+    }
+}
+@media (max-width:900px) {
+    .abouttop {
+        padding-top: 290px;
+        margin-left: 35px;
+    }
+    .aboutnameBG {
+        margin-left: 30px;
+    }
+    .aboutnameBG2 {
+        margin-top: 120px;
+        margin-left: 30px;
+    }
+    .h7 {
+        font-size: 170px;
+    }
+    .h8 {
+        font-size: 120px;
+    }
+    .heroabout img {
+        left: auto;
+        right: 0%;
+    }
+    * {
+        transition: all .5s;
+    }
+}
+@media (max-width:470px) {
+    .aboutnameBG {
+        margin-top: -30px;
+    }
+    .aboutnameBG2 {
+        margin-top: 100px;
+    }
+    .h7 {
+        font-size: 130px;
+    }
+    .h8 {
+        font-size: 100px;
+    }
+    .h9 {
+        font-size: 30px;
+    }
+}
+/* ------------------------- BIO ------------------------- */
+.bio {
+    width: 100%;
+    background-color: rgb(196,173,149);
+}
+.biopic {
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    justify-content: center;
+}
+.biopic img {
+    height: 480px;
+    width: auto;
+}
+.biopara {
+    justify-content: center;
+    align-items: center;
+    padding: 0 20% 60px 20%;
+}
+.resumebuttondiv {
+    justify-content: space-around;
+    padding-top: 50px;
+    display: flex;
+    text-align: center;
+}
+.resumebutton {
+    background-color:rgba(82,3,6);
+    display: inline-block;
+    width: 40%;
+    background-position: center;
+    justify-content: space-between;
+    text-align: center;
+    transition: all .7s;
+}
+.resumebutton h4 {
+    padding: 10px 0;
+}
+.resumebutton:hover {
+    background-color: rgb(184, 66, 66);
+    box-shadow: 0px 5px 10px black;
+}
+.resumebutton:hover h4{
+    color: rgb(255, 255, 255);
+}
+@media (max-width:900px) {
+    .heroabout, .heroabout img {
+        height: 660px;
+    }
+    .biopic img{
+        height: 300px;
+    }
+    h6 {
+        font-size: 50px;
+    }
+    .biopara {
+        justify-content: center;
+        align-items: center;
+        padding: 0 15% 60px 15%;
+    }
+    .resumebuttondiv {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .resumebutton {
+        margin-top: 30px;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: block;
+        justify-content: center;
+    }
+}
+/* ------------------------- SOCIAL LINKS ------------------------- */
+
+.sociallink {
+    background-color: white;
+    margin: 50px 10%;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    display:inline-flex;
+    justify-items: center;
+    text-align: center;
+}
+.sociallink h4{
+    color: black;
+    font-size: 35px;
+}
+
+.sociallink p {
+    color: black;
+}
+.sociallink img {
+    width: 180px;
+    height: auto;
+    margin-top: 30px;
+}
+.twitchlink, .tiktoklink, .twitterlink {
+    display:block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    width: 27%;
+}
+.linkbutton {
+    background-color:rgba(82,3,6);
+    padding: 10px 0;
+    margin: 30px 10% 0 10%;
+    transition: all .7s;
+}
+.linkbutton h4 {
+    color: white;
+    font-size: 25px;
+}
+.linkbutton:hover {
+    background-color: rgb(184, 66, 66);
+    box-shadow: 0px 5px 10px black;
+}
+.linkbutton:hover h4{
+    color: rgb(255, 255, 255);
+}
+.portbutton2 {
+    background-color:rgba(82,3,6);
+    padding: 0px 0;
+    margin: 50px 25% 20px 25%;
+    transition: all .7s;
+}
+.portbutton2:hover {
+    background-color: rgb(184, 66, 66);
+    box-shadow: 0px 5px 10px black;
+}
+.portbutton2:hover h4{
+    color: rgb(255, 255, 255);
+}
+@media (max-width:900px) {
+    .sociallink {
+        display: block;
+    }
+    .twitchlink, .tiktoklink, .twitterlink {
+        width: 80%;
+        margin: 40px 10%;
+    }
+    * {
+        transition: all ease-in-out .5s;
+    }
+    .portbutton2 {
+        margin: 50px 20% 20px 20%;
+    }
+}
+/* ------------------------- - ------------------------- 3 ------------------------- - ------------------------- */
+.portfull {
+    width: 100%;
+    background:linear-gradient(to bottom,rgb(196,173,149) 0%, white 50%);
+    justify-content: space-between;
+    display: flex;
+    background-position: center;
+    text-align: center;
+    font-size: 0;
+    margin: 0 auto;
+    padding: 0 5% 0 5%;
+    padding-bottom: 200px;
+}
+.portfull img {
+    width: 100%;
+    opacity: 100%;
+    display: block;
+    height: auto;
+    position: relative;
+    transition: all .5s;
+}
+.imgbox {
+    position: relative;
+}
+.portfull img:hover, .imgbox:hover {
+    opacity: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 20px black;
+    transition: all .5s;
+}
+.textover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(0,0,0,.6);
+    opacity: 0;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textover h2 {
+    color: white;
+}
+.textover:hover{
+    position: absolute;
+    opacity: .8;
+}
+
+.portleft, .portmid, .portright {
+    width: 550px;   
+}
+@media (max-width:900px) {
+    .portleft, .portmid, .portright {
+        width: 70%;
+        margin: 0 15%;
+    }
+    .portfull {
+        width: 100%;
+        justify-content:space-around;
+        display: block;
+        background-position: center;
+        text-align: center;
+    }
+}
+/* ------------------------- - ------------------------- 3 ------------------------- - ------------------------- */
+.show {
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+    background: url(images/PortBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.portfoliolayouttop {
+    display: flex;
+    padding: 10% 10%;
+    justify-content: space-between;
+    background-position: center;
+    text-align: center;
+}
+.layoutleft {
+    width: 600px;
+    padding: 0;
+    position: relative;
+    font-size: 0;
+}
+.layoutright {
+    width: 600px;
+    padding: 0 3%;
+}
+.leftimg2 {
+    padding-top: 300px;
+    bottom: 0;
+}
+.layoutright p{
+    color: rgba(82,3,6);
+}
+.layoutright a {
+    color:mediumorchid;
+}
+.rightimg {
+    padding-top: 20%;
+}
+.portfoliolayoutbot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    margin: 0 auto;
+    padding: 0 5% 200px 5%;
+}
+.b4footer3 {
+    background-color: rgb(196,173,149);
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    padding: 60px 10%;
+    text-align: center;
+    display:inline-flex;
+    justify-content:space-around;
+}
+.portbutton3 {
+    background-color:rgba(82,3,6);
+    padding: 20px 0;
+    width: 30%;
+    transition: all .7s;
+}
+.portbutton3:hover {
+    background-color: rgb(184, 66, 66);
+    box-shadow: 0px 5px 10px black;
+    cursor:pointer;
+}
+@media (max-width:900px) {
+    .portfoliolayouttop {
+        display: block;
+        justify-content: center;
+    }
+    .layoutleft, .layoutright {
+        width: 100%;
+        padding: 0;
+    }
+    .portfoliolayoutbot {
+        padding: 0 10% 100px 10%;
+        margin: 0;
+        width: 100%;
+    }
+    .rightimg {
+        padding-top: 5%;
+    }
+    .leftimg2 {
+        padding: 10% 0 10% 0;
+        bottom: 0;
+    }
+}
+/* ------------------------- - ------------------------- COPYRIGHT: NICOLAS WONG ------------------------- - ------------------------- */
