@@ -80,6 +80,10 @@ p {
     font-size: 20px;
     color: white;
 }
+body ::selection {
+    background-color: crimson;
+    color: white;
+}
 /* ------------------------- NAV ------------------------- */
 .navbar {
     background-color: rgb(248, 241, 229);
