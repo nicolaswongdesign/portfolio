@@ -92,6 +92,10 @@ body ::selection {
     color: white;
 }
 /* ------------------------- NAV ------------------------- */
+.nav--hidden {
+    transform: translateY(-87px);
+    box-shadow: none;
+}
 .navbar {
     background-color: rgb(248, 241, 229);
     color: white;
@@ -104,7 +108,10 @@ body ::selection {
     position: fixed;
     overflow: hidden;
     top: 0;
+    left: 0;
     width: 100%;
+    box-shadow:0 0 15px black;
+    transition: transform .4s;
 }
 .navspace {
     width: 100%;
@@ -149,6 +156,9 @@ li a {
     .navbar ul, .navbar ul li {
         display: block;
         text-align: left;
+    }
+    .nav--hidden {
+        transform: translateY(-100px);
     }
     .navspace {
         height: 98px;
