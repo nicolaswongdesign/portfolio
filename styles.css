@@ -916,6 +916,7 @@ footer ul li a{
 .layoutright {
     width: 600px;
     padding: 0 3%;
+    text-align: left;
 }
 .leftimg2 {
     padding-top: 300px;
