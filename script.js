@@ -113,6 +113,7 @@ class myFooter extends HTMLElement {
                             <ul>
                                 <li><a href="mailto:nicolaswong99@gmail.com" target="none">Email</a></li>
                                 <li><a href="https://www.discordapp.com/users/294463633805672450" target="none">Discord</a></li>
+                                <li><a href="https://linktr.ee/Niccolazzy" target="none">LinkTree</a></li>
                             </ul>
                         </div>
                     </div>
