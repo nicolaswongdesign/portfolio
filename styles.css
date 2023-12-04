@@ -247,13 +247,15 @@ p {
     width: 100%;
     text-align: center;
     position: relative;
-    background: url(images/hero/PortraitsBG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     top: 0;
     height: 1080px;
     overflow: hidden;
+}
+.hero.home {
+    background: url(images/hero/PortraitsBG.jpg);
 }
 .hero img {
     display: flex;
