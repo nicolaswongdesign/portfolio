@@ -585,6 +585,8 @@ p {
         justify-content: center;
     }
     .button {
+        width: 100%;
+        max-width: 350px;
         margin: 30px auto;
     }
 }
