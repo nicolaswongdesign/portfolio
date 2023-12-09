@@ -10,17 +10,6 @@ menu.addEventListener ('click', () => {
     mobileBar.classList.toggle('show');
 })
 
-// BUTTON HOVER EXTRA
-
-const linkBtn = document.querySelectorAll(".linkbutton")
-
-linkBtn.forEach(buttonHover => buttonHover.addEventListener("mouseover", function () {
-    this.children[0].children[0].innerHTML = `CHECK HERE &#10151;`
-}))
-linkBtn.forEach(buttonHover => buttonHover.addEventListener("mouseout", function () {
-    this.children[0].children[0].innerHTML = `CHECK HERE`
-}))
-
 // SCROLL BEHAVIOR - REVEAL
 
 window.addEventListener('scroll', reveal);
