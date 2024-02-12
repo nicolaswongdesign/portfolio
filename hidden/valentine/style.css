@@ -70,11 +70,26 @@ a, .yes {
 }
 
 @media (max-width: 800px) {
+    h1 {
+        font-size: 1.5em;
+        max-width: 200px;
+    }
+    h2 {
+        font-size: 1em;
+        max-width: 200px;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+    }
     .button-options {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .button {
+        margin-bottom: .5em;
     }
     .terms {
         width: 100%;
@@ -84,6 +99,13 @@ a, .yes {
     }
     .terms p{
         font-size: 12px;
+    }
+    .page-contain{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 3em 0;
     }
     
 }
