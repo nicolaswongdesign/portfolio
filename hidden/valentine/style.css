@@ -94,7 +94,7 @@ a, .yes {
     }
     .button {
         margin-bottom: .5em;
-        outline: 1px solid #9C33A1;
+        border: 1px solid #9C33A1;
     }
     .terms {
         width: 100%;
