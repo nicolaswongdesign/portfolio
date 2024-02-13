@@ -49,6 +49,7 @@ a, .yes {
     background-color: white;
     border-radius: 8px;
     transition: .2s;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
 }
 #buttonTerms {
     text-decoration: underline;
@@ -90,6 +91,7 @@ a, .yes {
     }
     .button {
         margin-bottom: .5em;
+        outline: 1px solid #9C33A1;
     }
     .terms {
         width: 100%;
