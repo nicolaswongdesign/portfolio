@@ -79,6 +79,9 @@ a, .yes {
         font-size: 1em;
         max-width: 200px;
     }
+    h3 {
+        font-size: 16px;
+    }
     img {
         width: 200px;
         height: 200px;
