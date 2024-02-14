@@ -13,6 +13,7 @@ body {
     width: 100%;
     align-items: center;
     padding: 10em 0;
+    transition: .5s;
 }
 img {
     width: 300px;
@@ -70,6 +71,21 @@ a, .yes {
     border-radius: 16px;
 }
 
+.flower, .confetti {
+    margin-top: 10em;
+    left: auto;
+    right: auto;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
+    transition: .5s;
+}
+.appear {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media (max-width: 800px) {
     h1 {
         font-size: 1.5em;
@@ -85,6 +101,7 @@ a, .yes {
     img {
         width: 200px;
         height: 200px;
+        transition: .5s;
     }
     .button-options {
         display: flex;
@@ -111,6 +128,9 @@ a, .yes {
         width: 100%;
         align-items: center;
         padding: 3em 0;
+    }
+    .flower, .confetti {
+        margin-top: 3em;
     }
     
 }

@@ -45,6 +45,14 @@ function closeTerms() {
     terms.style.display = 'none';
 };
 
+
 function celebrate() {
-    alert('YAAAYYY! :) You made it! I am very HAPPY now!')
+
+    const takeFlower = document.getElementById('flower');
+    const confetti = document.getElementById('confetti');
+
+    takeFlower.classList.add('appear');
+    confetti.classList.add('appear');
+
+
 }
