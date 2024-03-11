@@ -1,61 +1,4 @@
-// MOBILE NAVIGATION
-
-const menu = document.getElementById("menu");
-const mobileMenu = document.getElementById("mobile-menu");
-const mobileBar = document.getElementById("header");
-
-
-menu.addEventListener ('click', () => {
-    mobileMenu.classList.toggle('show');
-    mobileBar.classList.toggle('show');
-})
-
-// SCROLL BEHAVIOR - REVEAL
-
-window.addEventListener('scroll', reveal);
-
-function reveal(){
-    var reveals = document.querySelectorAll(".reveal");
-
-    for(var i = 0; i < reveals.length; i++){
-
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
-
-        if(revealtop < windowheight - revealpoint){
-            reveals[i].classList.add("active");
-        }
-        else{
-            reveals[i].classList.remove('active');
-        }
-    }
-}
-
-// SCROLL BEHAVIOR - NAVIGATION BAR
-const nav = document.querySelector(".header");
-var scrollValue = document.getElementById('scrollValue');
-let lastScrollY = window.scrollY;
-
-window.addEventListener("scroll", () => {
-    let scroll = this.scrollY;
-    if (scroll <= 550) {
-        console.log("stay");
-        nav.classList.remove("header--hidden");
-    }
-    else if (lastScrollY < window.scrollY) {
-        console.log("down");
-        nav.classList.add("header--hidden");    
-    }
-    else {
-        console.log("up");
-        nav.classList.remove("header--hidden"); 
-    }
-lastScrollY = window.scrollY;
-});
-
-
-// FOOTER HTML EXTENSION
+// HTML EXTENSION
 
 class myFooter extends HTMLElement {
     connectedCallback() {
@@ -122,3 +65,141 @@ class myFooter extends HTMLElement {
 }
 
 customElements.define('my-footer', myFooter);
+
+class myMobileNav extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-menulist" id="mobile-menulist">
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="graphicDesign.html">Graphic Design</a></li>
+                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
+                <li><a href="visualBranding.html">Visual Branding</a></li>
+            </ul>
+        </div>
+        `;
+    }
+}
+
+customElements.define('my-mobilenav', myMobileNav);
+
+class myNav extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <nav class="header" id="header">
+            <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
+            <ul class="menulist" id="menulist">
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="graphicDesign.html">Graphic Design</a></li>
+                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
+                <li><a href="visualBranding.html">Visual Branding</a></li>
+            </ul>
+            <div class="menubutton" id="menubutton"><label class="menu" for="menu">
+                <input type="checkbox" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </label>
+            </div>
+        </nav>
+        `;
+    }
+}
+
+customElements.define('my-nav', myNav);
+
+// PORTFOLIO LIST
+
+const urls = [
+    "maggie-miley.html",
+    "macaroni-maids.html",
+    "olympics-infographics.html"
+  ];
+const totalPages = urls.length;
+
+function nextPage() {
+  currentPage = (currentPage - 1 + totalPages) % totalPages;
+  window.location.href = urls[currentPage];
+}
+
+function prevPage() {
+  currentPage = (currentPage + 1) % totalPages;
+  window.location.href = urls[currentPage];
+}
+
+
+// ACTIVE PAGE
+
+const activeNav = window.location.pathname;
+const navLinks = document.querySelectorAll('.mobile-menu a').forEach(link=> {
+    if(link.href.includes(`${activeNav}`)){
+        link.classList.add('menuActive')
+    }
+})
+
+const navLinksMobile = document.querySelectorAll('.menulist a').forEach(link=> {
+    if(link.href.includes(`${activeNav}`)){
+        link.classList.add('menuActive')
+    }
+})
+
+// MOBILE NAVIGATION
+
+const menu = document.getElementById("menu");
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileBar = document.getElementById("header");
+
+
+
+menu.addEventListener ('click', () => {
+    mobileMenu.classList.toggle('show');
+    mobileBar.classList.toggle('show');
+})
+
+// SCROLL BEHAVIOR - REVEAL
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+    var reveals = document.querySelectorAll(".reveal");
+
+    for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add("active");
+        }
+        else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+
+// SCROLL BEHAVIOR - NAVIGATION BAR
+const nav = document.querySelector(".header");
+var scrollValue = document.getElementById('scrollValue');
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    let scroll = this.scrollY;
+    if (scroll <= 550) {
+        console.log("stay");
+        nav.classList.remove("header--hidden");
+    }
+    else if (lastScrollY < window.scrollY) {
+        console.log("down");
+        nav.classList.add("header--hidden");    
+    }
+    else {
+        console.log("up");
+        nav.classList.remove("header--hidden"); 
+    }
+lastScrollY = window.scrollY;
+});
+
+
+
+

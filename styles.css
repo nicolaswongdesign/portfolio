@@ -238,7 +238,7 @@ p {
         margin-top: 50px;
         font-size: 1.5em;
     }
-    .mobile-menu .menuActive, .menuActive a {
+    .mobile-menulist li:has(> a.menuActive), .mobile-menulist .menuActive {
         color: black;
         opacity: 1;
         background-color:white;
@@ -536,7 +536,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 150px;
     color: rgb(34, 34, 34);
     height: 40px;
     margin: 30px 0 ;
@@ -677,25 +677,32 @@ p {
     margin: 0 auto 0 auto;
 }
 .portfolio-card {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
 .portfolio-work {
     width: 50%;
     max-height: 450px;
     position: relative;
+}
+.portfolio-card .portfolio-work {
+    width: 100%;
+    grid-column: 1fr;
 }
 .portfolio-work img{
     object-fit: cover;
 }
 .portfolio-subtitle {
         display: flex;
+        flex-direction: column;
         color: white;
         background-color: rgba(0, 0, 0, 0.6);
         opacity: 0;
         position: absolute;
         z-index: 1;
-        width: 100%;
+        width: 80%;
+        padding: 0 10%;
         height: 100%;
         top: 0;
         text-align: center;
@@ -793,6 +800,37 @@ p {
     min-width: 600px;
     max-width: 1500px;
 }
+
+/* -------------------------- PORTFOLIO DISPLAY -------------------------- */
+
+.portfolio-piece .portfolio-work{
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    max-height: none;
+}
+.portfolio-piece.display img {
+    min-width: 0;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+.portfolio-piece.display a {
+    font-size: 0px;
+    display: block;
+}
+
+@media only screen and (max-width: 900px) {
+    .portfolio-piece .portfolio-work{
+        border-radius: 0px;
+    }
+}
+
+
+
+
+/* -------------------------- END PORTFOLIO DISPLAY -------------------------- */
+
 .portfolio-container {
     width: 80%;
     max-width: 1500px;
