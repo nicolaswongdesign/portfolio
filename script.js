@@ -132,13 +132,13 @@ function prevPage() {
 
 const activeNav = window.location.pathname;
 const navLinks = document.querySelectorAll('.mobile-menu a').forEach(link=> {
-    if(link.href.includes(`${activeNav}`)){
+    if(link.href === window.location.href){
         link.classList.add('menuActive')
     }
 })
 
 const navLinksMobile = document.querySelectorAll('.menulist a').forEach(link=> {
-    if(link.href.includes(`${activeNav}`)){
+    if(link.href === window.location.href){
         link.classList.add('menuActive')
     }
 })
