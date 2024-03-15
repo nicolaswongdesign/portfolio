@@ -14,30 +14,11 @@
     
     </head>
     <body>
-        <nav class="header" id="header">
-            <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
-            <ul class="menulist" id="menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
-            </ul>
-            <div class="menubutton" id="menubutton"><label class="menu" for="menu">
-                <input type="checkbox" id="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                </label>
-            </div>
-        </nav>
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-menulist" id="mobile-menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
-            </ul>
-        </div>
+
+        <my-nav></my-nav>
+
+        <my-mobilenav></my-mobilenav>
+
         <div class="limit-body" id="limit-body">
 
             <div class="portfolio-piece">
@@ -88,20 +69,47 @@
             <div class="container">
                 <div class="portfolio-container reveal">
                     <div class="inner-portfolio image">
-                        <video class="reveal" width="800" controls autoplay muted loop><source src="images/pages/visualBranding/isu-admissions/isuApply2023.mp4" type="video/mp4"></video>
+                        <video class="reveal" height="800" controls autoplay muted loop><source src="images/pages/visualBranding/isu-admissions/isuApply2023.mp4" type="video/mp4"></video>
                     </div>
                     <div class="inner-portfolio text">
                         <p>Adding motion to a static image by creating a video capturing more of the audience's attention, which help to boost your engagement and expand your content's reach. When implementing text into a video, you must consider the time it takes to read each phrase, knowing when to transition to the next one. The text durations should align with the average viewer's reading speed for optimal impact.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <img class="shadow reveal" src="images/pages/visualBranding/isu-admissions/Decision1Day.jpg" alt="Instagram posts for ISU decision day 1">                    
+                    </div>
+
+                    <div class="inner-portfolio">
+                        <img class="shadow reveal" src="images/pages/visualBranding/isu-admissions/Decision1DayText.jpg" alt="Instagram posts for ISU 1 days before deciscion day with a photo of reggie in the background">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <img class="shadow reveal" src="images/pages/visualBranding/isu-admissions/Decision6Day.jpg" alt="Instagram posts for ISU decision day 6">
+                    </div>
+                    <div class="inner-portfolio">
+                        <img class="shadow reveal" src="images/pages/visualBranding/isu-admissions/Decision6DayText.jpg" alt="Instagram posts for ISU 6 days before deciscion day with the picture of the bridge by campus">
+                    </div>
+                </div>
+            </div>
+
             
-            <div class="portfolio-piece small">
-                <img class="reveal" src="images/pages/visualBranding/isu-admissions/Decision1Day.jpg" alt="Instagram posts for ISU decision day 1">
-                <img class="reveal" src="images/pages/visualBranding/isu-admissions/Decision1DayText.jpg" alt="Instagram posts for ISU 1 days before deciscion day with a photo of reggie in the background">
-                <img class="reveal" src="images/pages/visualBranding/isu-admissions/Decision6Day.jpg" alt="Instagram posts for ISU decision day 6">
-                <img class="reveal" src="images/pages/visualBranding/isu-admissions/Decision6DayText.jpg" alt="Instagram posts for ISU 6 days before deciscion day with the picture of the bridge by campus">
-                <video class="reveal" width="800" controls autoplay muted loop><source src="images/pages/visualBranding/isu-admissions/isuHolidayGears.mp4" type="video/mp4"></video>
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <video class="reveal" width="800" controls autoplay muted loop><source src="images/pages/visualBranding/isu-admissions/isuHolidayGears.mp4" type="video/mp4"></video>
+                    </div>
+                    <div class="inner-portfolio text">
+                        <p>Creating a sense of presence by making the virtual experience for the user to feel included. For example, using snow for the winter merch promotion. Then, include a call to action at the end, this can bring user to go directly to where the advertise takes easier. By both using inclusion effect and call to action, it increased both user's attention and engagement rate.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="container alternate">
@@ -115,6 +123,18 @@
                         <h5>What could be improved</h5>
                         <p>Can use more of a consistent style and aesthetic that enhances the overall page, making it more unified and recognizable as the brand. Other than improving visual elements, my thoughts on the post descriptions could be more active and include better calls to action.</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- pagination -->
+            
+            <div class="container reveal">
+                <div class="columns-container sub-title">
+                    <h2>More Projects</h2>
+                </div>
+                <div class="inner-container flex-center">
+                    <div class="button" id="prevBtn" onclick="prevPage()"><a><p>Previous</p></a></div>
+                    <div class="button" id="nextBtn" onclick="nextPage()"><a><p>Next</p></a></div>
                 </div>
             </div>
 
@@ -146,6 +166,10 @@
         <a href="#"><div class="back-to-top"><img src="images/assets/arrow.png" alt="arrow"></div></a>
 
         <my-footer></my-footer>
+
+        <script>
+            let currentPage = 2;
+        </script>
             
         <script src="script.js"></script>
     </body>

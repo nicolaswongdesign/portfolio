@@ -14,22 +14,11 @@
     
     </head>
     <body>
-        <nav class="header" id="header">
-            <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
-            <ul class="menulist" id="menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
-            </ul>
-            <div class="menubutton" id="menubutton"><label class="menu" for="menu">
-                <input type="checkbox" id="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                </label>
-            </div>
-        </nav>
+
+        <my-nav></my-nav>
+
+        <my-mobilenav></my-mobilenav>
+
         <div class="mobile-menu" id="mobile-menu">
             <ul class="mobile-menulist" id="mobile-menulist">
                 <li><a href="aboutMe.html">About Me</a></li>
@@ -106,10 +95,24 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="portfolio-piece small">
-                <img class="reveal" src="images/pages/graphicDesign/charlie-jobson-park/ParkPoster_Banner.png" alt="A banner that have the airplane and clouds and a turtle attached to a balloon">
-                <video class="reveal" width="800" controls autoplay muted loop><source src="images/pages/graphicDesign/charlie-jobson-park/GrandOpeningIntro.mp4" type="video/mp4"></video>
+
+            <div class="container alternate">
+                <div class="columns-container start reveal">
+                    <div class="inner-container large">
+                        <h2>Discussion Points</h2>
+                        <p>How can we effectively <a style="color:crimson; text-decoration: underline;" href="https://www.wglt.org/local-news/2023-10-07/its-a-palette-colene-hoose-natural-playground-now-open-to-the-public" target="none">brand guidelines.</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <video class="reveal" width="800" controls autoplay muted loop><source src="images/pages/graphicDesign/charlie-jobson-park/GrandOpeningIntro.mp4" type="video/mp4"></video>                    </div>
+                    <div class="inner-portfolio text">
+                        <p>Adding motion to a static image by creating a video capturing more of the audience's attention, which help to boost your engagement and expand your content's reach. When implementing text into a video, you must consider the time it takes to read each phrase, knowing when to transition to the next one. The text durations should align with the average viewer's reading speed for optimal impact.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="container alternate">
@@ -123,6 +126,18 @@
                         <h5>What could be improved</h5>
                         <p>Given the time constraints, there wasn't extra time to refine typography and text placements. However, with the available time, we made sure that they were appropriately positioned. While there are minor details in characters and colorings that could be refined, they adds charm to the poster, giving it a childlike and characteristic quality.</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- pagination -->
+            
+            <div class="container reveal">
+                <div class="columns-container sub-title">
+                    <h2>More Projects</h2>
+                </div>
+                <div class="inner-container flex-center">
+                    <div class="button" id="prevBtn" onclick="prevPage()"><a><p>Previous</p></a></div>
+                    <div class="button" id="nextBtn" onclick="nextPage()"><a><p>Next</p></a></div>
                 </div>
             </div>
 
@@ -154,6 +169,10 @@
         <a href="#"><div class="back-to-top"><img src="images/assets/arrow.png" alt="arrow"></div></a>
 
         <my-footer></my-footer>
+
+        <script>
+            let currentPage = 0;
+        </script>
             
         <script src="script.js"></script>
     </body>

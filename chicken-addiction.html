@@ -14,30 +14,11 @@
     
     </head>
     <body>
-        <nav class="header" id="header">
-            <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
-            <ul class="menulist" id="menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
-            </ul>
-            <div class="menubutton" id="menubutton"><label class="menu" for="menu">
-                <input type="checkbox" id="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                </label>
-            </div>
-        </nav>
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-menulist" id="mobile-menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
-            </ul>
-        </div>
+
+        <my-nav></my-nav>
+
+        <my-mobilenav></my-mobilenav>
+
         <div class="limit-body" id="limit-body">
 
             <div class="portfolio-piece">
@@ -110,6 +91,16 @@
                 </div>
             </div>
 
+            <div class="container reveal">
+                <div class="columns-container sub-title">
+                    <h2>More Projects</h2>
+                </div>
+                <div class="inner-container flex-center">
+                    <div class="button" id="prevBtn" onclick="prevPage()"><a><p>Previous</p></a></div>
+                    <div class="button" id="nextBtn" onclick="nextPage()"><a><p>Next</p></a></div>
+                </div>
+            </div>
+
 
             <div class="container">
                 <div class="columns-container link reveal">
@@ -138,6 +129,10 @@
         <a href="#"><div class="back-to-top"><img src="images/assets/arrow.png" alt="arrow"></div></a>
 
         <my-footer></my-footer>
+
+        <script>
+            let currentPage = 4;
+        </script>
             
         <script src="script.js"></script>
     </body>

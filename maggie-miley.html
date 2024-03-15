@@ -14,30 +14,11 @@
     
     </head>
     <body>
-        <nav class="header" id="header">
-            <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
-            <ul class="menulist" id="menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
-            </ul>
-            <div class="menubutton" id="menubutton"><label class="menu" for="menu">
-                <input type="checkbox" id="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                </label>
-            </div>
-        </nav>
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-menulist" id="mobile-menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
-            </ul>
-        </div>
+
+        <my-nav></my-nav>
+
+        <my-mobilenav></my-mobilenav>
+
         <div class="limit-body" id="limit-body">
 
             <div class="portfolio-piece">
@@ -64,7 +45,7 @@
                     </div>
                     <div class="inner-container large">
                         <h5>Project Details</h5>
-                        <p>I redesigned a local business's website that appeared unappealing and outdated. Instead of recoding the entire site, the focus was mainly on redesigning the layout for a more pleasing and user-friendly appearance. <span class="highlights">The primary goal was to simplify the customer's experience, making it both visually appealing and user-friendly.</span></p>
+                        <p>I redesigned a local business's <a style="color:crimson; text-decoration: underline;" href="https://www.maggiemileys.net/" target="none">website</a> that appeared unappealing and outdated. Instead of recoding the entire site, the focus was mainly on redesigning the layout for a more pleasing and user-friendly appearance. <span class="highlights">The primary goal was to simplify the customer's experience, making it both visually appealing and user-friendly.</span></p>
                         <h5>Project Goals</h5>
                         <p>The project aimed at learning how to redesign a website without altering its content, focusing on the consumer's perspective to understand their overall experience. Specifically, the main focus was on <span class="highlights">improving the customer's experience with online food ordering.</span></p>
                     </div>
@@ -82,13 +63,49 @@
                 </div>
             </div>
 
-            
-            <div class="portfolio-piece small">
-                <img class="reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyHome.jpg" alt="Redesigned Maggie Miley's home website that includes pictures of burgers, drinks, and their location.">
-                <img class="reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyMenu.jpg" alt="Redesigned Maggie Miley's menu website that have different options">
-                <img class="reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyOrder.jpg" alt="Redesigned Maggie Miley's website online order menu layout">
-                <img class="reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyCheckout.jpg" alt="Redesigned Maggie Miley's website with the checkout page, asking for customer's information.">
-                <img class="reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyConfirmation.jpg" alt="Redesigned Maggie Miley's website with a confirmation order.">
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <img src="images/pages/uiuxDesign/maggie-miley/maggieMileyMockUp.jpg" alt="5 different screen website mockup of maggie miley, an irish bar restaurant">
+                    </div>
+                    <div class="inner-portfolio text">
+                        <p>To make the process of <span class="highlights">ordering food online</span> easier, it is necessary to give them an experience that are very familiar to them, there is no need to invent something new what is already working. Creating your "own" special way will only create more confusion for the users.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <img class="shadow reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyHome.jpg" alt="Redesigned Maggie Miley's home website that includes pictures of burgers, drinks, and their location.">
+                    </div>
+                    <div class="inner-portfolio">
+                        <img class="shadow reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyMenu.jpg" alt="Redesigned Maggie Miley's menu website that have different options">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <img class="shadow reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyOrder.jpg" alt="Redesigned Maggie Miley's website online order menu layout">
+                    </div>
+                    <div class="inner-portfolio text">
+                        <p>The difference between the current website and this redesigned website is the appeal for the users. Images play a strong role to make the users to crave food in a restaurant. So, emphasizing the menu with images, while maintaining the price and descriptions as a card, creates a fully simple and efficient appeal layout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="portfolio-container reveal">
+                    <div class="inner-portfolio image">
+                        <img class="shadow reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyCheckout.jpg" alt="Redesigned Maggie Miley's website with the checkout page, asking for customer's information.">
+                    </div>
+
+                    <div class="inner-portfolio">
+                        <img class="shadow reveal" src="images/pages/uiuxDesign/maggie-miley/maggieMileyConfirmation.jpg" alt="Redesigned Maggie Miley's website with a confirmation order.">
+                    </div>
+                </div>
             </div>
 
             <div class="container alternate">
@@ -99,7 +116,7 @@
                     <div class="inner-container large">
                         <h5>What I learned</h5>
                         <p>While redesigning the site layout, I always kept in mind the importance of readability, legibility, and accessibility. A key focus was on enhancing the overall customer interaction, considering:</p>
-                        <ul style="margin-left: 50px;">
+                        <ul style="margin-left: 15px;">
                             <li><p>How easily users can find tasks</p></li>
                             <li><p>How quickly tasks can be completed</p></li>
                             <li><p>The number of clicks required to finish a task</p></li>
@@ -107,6 +124,18 @@
                         <h5>What could be improved</h5>
                         <p>The project's functionality came closely with how I vision it, but I noticed the need for attention to font choices and sizes to better harmonize with the entire site. The online order page presents inconsistencies in page layout and footer, which require adjustments for better uniformity. Despite these, the online order task is generally straightforward and easy to navigate.</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- pagination -->
+            
+            <div class="container reveal">
+                <div class="columns-container sub-title">
+                    <h2>More Projects</h2>
+                </div>
+                <div class="inner-container flex-center">
+                    <div class="button" id="prevBtn" onclick="prevPage()"><a><p>Previous</p></a></div>
+                    <div class="button" id="nextBtn" onclick="nextPage()"><a><p>Next</p></a></div>
                 </div>
             </div>
 
@@ -138,6 +167,10 @@
         <a href="#"><div class="back-to-top"><img src="images/assets/arrow.png" alt="arrow"></div></a>
 
         <my-footer></my-footer>
+
+        <script>
+            let currentPage = 6;
+        </script>
             
         <script src="script.js"></script>
     </body>

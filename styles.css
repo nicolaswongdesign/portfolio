@@ -37,7 +37,7 @@ h5 {
     font-weight: 700;
     font-size: 20px;
 }
-p {
+p, textarea, input {
     font-family: 'Gabarito', sans-serif;
     font-size: 17px;
 }
@@ -302,9 +302,17 @@ p {
     width: auto;
 }
 .pages-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     height: auto;
     position: relative;
     margin-bottom: 300px;
+}
+.pages-title.short {
+    margin-bottom: 0;
+    max-width: 1200px;
 }
 .pages-title h1 {
     font-size: 80px;
@@ -528,16 +536,17 @@ p {
     justify-content: left;
     text-align: left;
 }
-.inner-container.image img {
+.inner-container.image img, .inner-container.image source {
     height: 300px;
     margin: 0 auto;
 }
-.button {
+.button, button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 150px;
     color: rgb(34, 34, 34);
+    background-color: white;
     height: 40px;
     margin: 30px 0 ;
     border-color: rgb(34, 34, 34);
@@ -556,7 +565,7 @@ p {
     height: 100%;
     transition: .3s ease-in-out ;
 }
-.button a:hover {
+.button a:hover, button:hover {
     color: white;
     background-color: rgb(34, 34, 34);
     transition: .3s ease-in-out ;
@@ -584,7 +593,7 @@ p {
         width: 100%;
         justify-content: center;
     }
-    .button {
+    .button, button {
         width: 100%;
         max-width: 350px;
         margin: 30px auto;
@@ -794,11 +803,15 @@ p {
     width: 80%;
     min-width: 600px;
     height: auto;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 .portfolio-piece.small img, .portfolio-piece.small video {
     min-width: 600px;
     max-width: 1500px;
+}
+
+.shadow {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);;
 }
 
 /* -------------------------- PORTFOLIO DISPLAY -------------------------- */
@@ -812,7 +825,7 @@ p {
 .portfolio-piece.display img {
     min-width: 0;
     width: 100%;
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .portfolio-piece.display a {
@@ -823,6 +836,7 @@ p {
 @media only screen and (max-width: 900px) {
     .portfolio-piece .portfolio-work{
         border-radius: 0px;
+        margin-bottom: 0;
     }
 }
 
@@ -847,6 +861,11 @@ p {
     text-underline-offset: 20px;
     text-decoration-thickness: 3px;
 }
+.columns-container.sub-title {
+    font-size: 20px;
+    justify-content: center;
+    padding: 50px 0 0 0;
+}
 .columns-container.start {
     align-items: flex-start;
 }
@@ -862,6 +881,7 @@ p {
     display: flex;
     justify-content: center;
     padding-right: 50px;
+    margin: 0 auto;
 }
 .inner-portfolio.text {
     width: 100%;
@@ -869,15 +889,31 @@ p {
     min-width: 300px;
     text-align: left;
 }
-.inner-portfolio img, .inner-portfolio video {
+.inner-portfolio img {
     height: auto;
+    max-height: 800px;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
+.inner-portfolio video {
+    height: auto;
+    max-height: 800px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.flex-center {
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    gap: 50px;
+}
 @media only screen and (max-width: 900px) {
     .inner-portfolio.image {
         padding-right: 0;
+        margin-bottom: 50px;
     }
     .portfolio-container {
         display: block;
@@ -899,6 +935,10 @@ p {
         width: 80%;
     }
     .columns-container.main-title {
+        display: flex;
+        justify-content: center;
+    }
+    .columns-container.sub-title {
         display: flex;
         justify-content: center;
     }
@@ -1096,5 +1136,38 @@ footer h4, footer a, footer p, footer ul {
     }
     .contacts, .socials, .pages {
         margin-top: 30px;
+    }
+}
+
+form {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input {
+    padding: 0 5px;
+    height: 2rem;
+}
+form textarea {
+    padding: 5px;
+    resize: none;
+    max-width: 98%;
+    height: 15rem;
+}
+
+#contactMe .columns-container .inner-container.image {
+    display: flex;
+}
+#contactMe .columns-container .inner-container.image video, #contactMe .columns-container .inner-container.image source{
+    width: 100%;
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 900px) {
+    form {
+        margin: 0 auto;
     }
 }

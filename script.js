@@ -11,14 +11,12 @@ class myFooter extends HTMLElement {
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="aboutMe.html">About Me</a></li>
-                                <li><a href="graphicDesign.html">Graphic Design</a></li>
+                                <li><a href="contactMe.html">Contact Me</a></li>
                             </ul>
                         </div>
                         <div class="pages-links-2">
                             <ul>
-                                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                                <li><a href="visualBranding.html">Visual Branding</a></li>
-                                <li style="display: none;"><a href="#">Portfolio</a></li>
+                                <li"><a href="portfolio.html">Portfolio</a></li>
                             </ul>
                         </div>
                     </div>
@@ -72,9 +70,8 @@ class myMobileNav extends HTMLElement {
         <div class="mobile-menu" id="mobile-menu">
             <ul class="mobile-menulist" id="mobile-menulist">
                 <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
             </ul>
         </div>
         `;
@@ -90,9 +87,8 @@ class myNav extends HTMLElement {
             <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
             <ul class="menulist" id="menulist">
                 <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="graphicDesign.html">Graphic Design</a></li>
-                <li><a href="uiuxDesign.html">UI/UX Design</a></li>
-                <li><a href="visualBranding.html">Visual Branding</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
             </ul>
             <div class="menubutton" id="menubutton"><label class="menu" for="menu">
                 <input type="checkbox" id="menu">
@@ -111,9 +107,14 @@ customElements.define('my-nav', myNav);
 // PORTFOLIO LIST
 
 const urls = [
+    "charlie-jobson-park.html",
+    "olympics-infographics.html",
+    "isu-admissions.html",
+    "volufixion.html",
+    "chicken-addiction.html",
+    "dcode.html",
     "maggie-miley.html",
-    "macaroni-maids.html",
-    "olympics-infographics.html"
+    "boost.html"
   ];
 const totalPages = urls.length;
 

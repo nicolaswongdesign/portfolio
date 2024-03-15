@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact</title>
+        <link href="styles.css" rel="stylesheet">
+        <link href="images/favicon.ico" rel="icon" type="image/svg+xml">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;900&family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,900;1,700;1,800&family=Source+Sans+3:wght@200;300;800;900&display=swap" rel="stylesheet">
+
+    
+    </head>
+    <body>
+
+        <my-nav></my-nav>
+
+        <my-mobilenav></my-mobilenav>
+        
+        <div class="limit-body" id="limit-body">
+
+            <div class="container" id="contactMe">
+                <div class="columns-container" style="padding: 5% 10% 0 10%;">
+                    <div class="inner-container">
+                        <h1>Let's bring our visions to life!</h1>
+                    </div>
+                </div>
+                <div class="columns-container" style="align-items: start;">
+                    
+                    <div class="inner-container">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+
+                            <input type="hidden" name="access_key" value="cc5552ce-2dac-47c0-8f9c-32d8439c629d">
+                        
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" name="email" required>
+                            <textarea style="transition: 0s all;" placeholder="Type your message here" name="message" required ></textarea>
+                        
+                        
+                            <button class="button" type="submit"><p>Submit Form</p></button>
+                        
+                        </form>
+                    </div>
+
+                    <div class="inner-container image" style="padding-right: 0px;">
+                        <video autoplay loop muted>
+                            <source src="images/assets/HelloWorldSquare.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="columns-container link reveal">
+                    <a href="graphicDesign.html"><h2>Graphic Design</h2></a>
+                    <a href="uiuxDesign.html"><h2>UI/UX Design</h2></a>
+                    <a href="visualBranding.html"><h2>Visual Branding</h2></a>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="columns-container reveal">
+                    <div class="inner-container image">
+                        <img src="images/assets/8bitprofile.png" alt="8bit profile picture">
+                    </div>
+                    <div class="inner-container">
+                        <h2>Curious of my full work and experience?</h2>
+                        <p>Come check out my resume and portfolio</p>
+                        <div class="button"><a href="images/pdfs/resume.pdf" target="none"><p>Resume</p></a></div>
+                        <div class="button"><a href="images/pdfs/PortfolioPDF.pdf" target="none"><p>Portfolio</p></a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a href="#"><div class="back-to-top"><img src="images/assets/arrow.png" alt="arrow"></div></a>
+
+        <my-footer></my-footer>
+            
+        <script src="script.js"></script>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+    </body>
+</html>
