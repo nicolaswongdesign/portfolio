@@ -104,6 +104,15 @@ class myNav extends HTMLElement {
 
 customElements.define('my-nav', myNav);
 
+// AUTOPLAY VIDEO
+
+window.onload = function() {
+  var videos = document.querySelectorAll('.autoplayVideo');
+  videos.forEach(function(video) {
+    video.play();
+  });
+};
+
 // PORTFOLIO LIST
 
 const urls = [
