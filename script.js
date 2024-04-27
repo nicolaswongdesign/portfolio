@@ -1,4 +1,19 @@
-// HTML EXTENSION
+
+
+// HTML EXTENSION - FOOTER
+// HTML EXTENSION - MOBILE NAV
+// HTML EXTENSION - NAV
+// AUTOPLAY VIDEOS
+// PORTFOLIO LIST
+// ACTIVE PAGE
+// MOBILE NAVIGATION
+// SCROLL BEHAVIOR - REVEAL
+// SCROLL BEHAVIOR - NAVIGATION BAR
+
+
+
+
+// HTML EXTENSION - FOOTER
 
 class myFooter extends HTMLElement {
     connectedCallback() {
@@ -64,6 +79,8 @@ class myFooter extends HTMLElement {
 
 customElements.define('my-footer', myFooter);
 
+// HTML EXTENSION - MOBILE NAV
+
 class myMobileNav extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -72,13 +89,18 @@ class myMobileNav extends HTMLElement {
                 <li><a href="aboutMe.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contactMe.html">Contact Me</a></li>
+                <li><a href="images/pdfs/resume.pdf" download>Download CV</a></li>
             </ul>
         </div>
         `;
     }
 }
 
+
 customElements.define('my-mobilenav', myMobileNav);
+
+
+// HTML EXTENSION - NAV
 
 class myNav extends HTMLElement {
     connectedCallback() {
@@ -89,6 +111,7 @@ class myNav extends HTMLElement {
                 <li><a href="aboutMe.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contactMe.html">Contact Me</a></li>
+                <li style="border: 1px solid white; border-radius:8px;"><a href="images/pdfs/resume.pdf" download>Download CV</a></li>
             </ul>
             <div class="menubutton" id="menubutton"><label class="menu" for="menu">
                 <input type="checkbox" id="menu">
