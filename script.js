@@ -89,7 +89,7 @@ class myMobileNav extends HTMLElement {
                 <li><a href="aboutMe.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contactMe.html">Contact Me</a></li>
-                <li><a href="images/pdfs/resume.pdf" download>Download CV</a></li>
+                <li><a href="images/pdfs/resume.pdf" download="NicolasWong_Resume">Download CV</a></li>
             </ul>
         </div>
         `;
@@ -111,7 +111,7 @@ class myNav extends HTMLElement {
                 <li><a href="aboutMe.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contactMe.html">Contact Me</a></li>
-                <li style="border: 1px solid white; border-radius:8px;"><a href="images/pdfs/resume.pdf" download>Download CV</a></li>
+                <li style="border: 1px solid white; border-radius:8px;"><a href="images/pdfs/resume.pdf" download="NicolasWong_Resume">Download CV</a></li>
             </ul>
             <div class="menubutton" id="menubutton"><label class="menu" for="menu">
                 <input type="checkbox" id="menu">
