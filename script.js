@@ -146,7 +146,8 @@ const urls = [
     "chicken-addiction.html",
     "dcode.html",
     "maggie-miley.html",
-    "boost.html"
+    "boost.html",
+    "isu-casit.html"
   ];
 const totalPages = urls.length;
 
