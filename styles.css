@@ -524,11 +524,12 @@ p, textarea, input {
     width: 50%;
     min-width: 350px;
 }
+/*
 .inner-container.title h2 {
     text-decoration:underline 1px;
     text-underline-offset: 15px;
 }
-
+*/
 
 .inner-container.description {
     display: flex;

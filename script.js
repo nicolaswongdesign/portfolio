@@ -64,7 +64,7 @@ class myFooter extends HTMLElement {
                     </div>
                 </div>
                 <div class="copyright">
-                    <p>Copyright © 2023 Nicolas Wong. All Rights Reserved.</p>                    
+                    <p>Copyright © 2024 Nicolas Wong. All Rights Reserved.</p>                    
                     <a href="https://www.instagram.com/niccolazzy/" target="none"><img src="images/footer/instagram.png" alt="instagram"/></a>
                     <a href="https://www.linkedin.com/in/nicolas-wong-aa768823b/" target="none"><img src="images/footer/linkedin.png" alt="linkedin"/></a>
                     <a href="https://www.tiktok.com/@niccolazzy?lang=en" target="none"><img src="images/footer/tiktok.png" alt="tiktok"/></a>
