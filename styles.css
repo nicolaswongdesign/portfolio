@@ -891,6 +891,7 @@ p, textarea, input {
     text-align: left;
 }
 .inner-portfolio img {
+    object-fit: contain;
     height: auto;
     max-height: 800px;
     width: 100%;
