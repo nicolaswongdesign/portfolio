@@ -27,7 +27,7 @@ const polaroids = [
     { src: 'images/0616_2.jpg', text: 'Look at the sky|0616' },
     { src: 'images/0623.JPG', text: 'First goofy photo togetha|06/23' },
     { src: 'images/0624.JPG', text: 'Fancy clothes|06/24' },
-    { src: 'images/0624_2.JPG', text: 'ESCAPED WITH THE GROUP|06/24' },
+    { src: 'images/0624_2.jpg', text: 'ESCAPED WITH THE GROUP|06/24' },
     { src: 'images/0715.JPG', text: 'First scawy car crash &#128560;|07/15' },
     { src: 'images/0716.JPG', text: 'Mirror piccss|07/16' },
     { src: 'images/0815.JPG', text: 'DOUBLE LOOPY??|08/15' },
@@ -43,7 +43,7 @@ const polaroids = [
     { src: 'images/1219.jpg', text: 'Nice view of indo garden|12/19' },
     { src: 'images/1219_2.jpg', text: 'BWOMPPP|12/19' },
     { src: 'images/1224.jpg', text: 'Swagger couple|12/24' },
-    { src: 'images/0118.jpg', text: 'GROUP RAVEEEEE|01/18' },
+    { src: 'images/0118.JPG', text: 'GROUP RAVEEEEE|01/18' },
     { src: 'images/0130.jpg', text: 'Twinsies with the cuzzo bf|01/30' },
     { src: 'images/bubududuspin.gif', text: 'I cannot wait to make more<br>memories with you<br>forever and ever<br>and ever and ever|with our cars...' }
   ];
