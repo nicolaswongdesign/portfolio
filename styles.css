@@ -302,19 +302,21 @@ p, textarea, input {
     width: auto;
 }
 .pages-title {
+    background-color: rgba(0, 0, 0, .4);
+    align-content: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
-    margin-bottom: 300px;
 }
 .pages-title.short {
     margin-bottom: 0;
     max-width: 1200px;
 }
 .pages-title h1 {
+    margin-bottom: 300px;
     font-size: 80px;
 }
 
@@ -352,6 +354,7 @@ p, textarea, input {
     margin-top: 0px;
     position:absolute;
     margin-top: 400px;
+    mix-blend-mode: hard-light ;
 }
 .hero-subtitle h4 {
     font-family: 'Montserrat', sans-serif;
@@ -501,13 +504,36 @@ p, textarea, input {
     justify-content: space-between;
     padding: 5% 10%;
 }
+
+.columns-container-work {
+    width: 80%;
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 10%;
+}
+
+.columns-container-work p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
 .columns-container.dark:hover {
     background-color: rgba(0,0,0,0.06);
 }
 .columns-container a {
     color: rgb(34, 34, 34);
 }
-.inner-container {
+.inner-container-work.role h3{
+    font-weight: 400;
+    color: white;
+}
+.workExperienceTitle h2 {
+    color: white;
+    padding: 0 10%;
+}
+.inner-container, .inner-container-work {
     color: rgb(34, 34, 34);
     width: 90%;
     max-width: 700px;
@@ -517,26 +543,30 @@ p, textarea, input {
     justify-content: center;
     padding-right: 50px;
 }
-.inner-container.title {
+.inner-container.title, .inner-container-work.role {
     display: flex;
     justify-content: left;
     padding-right: 50px;
     width: 50%;
     min-width: 350px;
 }
-/*
-.inner-container.title h2 {
-    text-decoration:underline 1px;
-    text-underline-offset: 15px;
-}
-*/
 
-.inner-container.description {
+.inner-container.description, .inner-container-work.client{
     display: flex;
     width: 100%;
     justify-content: left;
     text-align: left;
 }
+
+.inner-container-work.client{
+    justify-content: space-between;
+}
+
+.inner-container-work.client p{
+    width: 45%;
+}
+
+
 .inner-container.image img, .inner-container.image source {
     height: 300px;
     margin: 0 auto;
@@ -578,12 +608,15 @@ p, textarea, input {
     .intro-text h2 {
         font-size: 30px;
     }
-    .columns-container {
+    .columns-container, .columns-container-work {
         display: block;
     }
     .inner-container {
         text-align: center;
         margin: 0 auto;
+    }
+    .inner-container-work.client p{
+        margin-block-start: 0;
     }
     .inner-container.image {
         padding-right: 0;
@@ -599,6 +632,17 @@ p, textarea, input {
         max-width: 350px;
         margin: 30px auto;
     }
+}
+
+@media only screen and (max-width: 550px) {
+    .inner-container-work {
+        display: flex;
+        flex-direction: column;
+    }
+    .inner-container-work.client p{
+        width: 100%;
+    }
+
 }
 
 /* -------------------------- ABOUT ME -------------------------- */
@@ -812,7 +856,7 @@ p, textarea, input {
 }
 
 .shadow {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
 }
 
 /* -------------------------- PORTFOLIO DISPLAY -------------------------- */
@@ -952,8 +996,10 @@ p, textarea, input {
         width: 80%;
         min-width: 0;
     }
-
 }
+
+
+
 /* -------------------------- IMAGE SLIDER -------------------------- */
 
 .image-slider {

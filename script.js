@@ -1,8 +1,10 @@
 
-
-// HTML EXTENSION - FOOTER
 // HTML EXTENSION - MOBILE NAV
 // HTML EXTENSION - NAV
+// HTML EXTENSION - PAGINATION
+// HTML EXTENSION - SUBFOOTER
+// HTML EXTENSION - FOOTER
+
 // AUTOPLAY VIDEOS
 // PORTFOLIO LIST
 // ACTIVE PAGE
@@ -12,6 +14,106 @@
 
 
 
+
+
+// HTML EXTENSION - MOBILE NAV
+
+class myMobileNav extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-menulist" id="mobile-menulist">
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="aboutMe.html#workExperience">Experience</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+                <li><a href="images/pdfs/resume.pdf" download="NicolasWong_Resume">Download CV</a></li>
+            </ul>
+        </div>
+        `;
+    }
+}
+
+
+customElements.define('my-mobilenav', myMobileNav);
+
+
+// HTML EXTENSION - NAV
+
+class myNav extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <nav class="header" id="header">
+            <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
+            <ul class="menulist" id="menulist">
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="aboutMe.html#workExperience">Experience</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+                <li style="border: 1px solid white; border-radius:8px;"><a href="images/pdfs/resume.pdf" download="NicolasWong_Resume">Download CV</a></li>
+            </ul>
+            <div class="menubutton" id="menubutton"><label class="menu" for="menu">
+                <input type="checkbox" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </label>
+            </div>
+        </nav>
+        `;
+    }
+}
+
+
+customElements.define('my-nav', myNav);
+
+
+// HTML EXTENSION - PAGINATION
+
+class myPagination extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <div class="container reveal">
+                <div class="columns-container sub-title">
+                    <h2>More Projects</h2>
+                </div>
+                <div class="inner-container flex-center">
+                    <div class="button" id="prevBtn" onclick="prevPage()"><a><p>Previous</p></a></div>
+                    <div class="button" id="nextBtn" onclick="nextPage()"><a><p>Next</p></a></div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+
+customElements.define('my-pagination', myPagination);
+
+
+// HTML EXTENSION - SUBFOOTER
+
+class mySubFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <div class="container">
+                <div class="columns-container reveal">
+                    <div class="inner-container image">
+                        <img src="images/assets/8bitprofile.png" alt="8bit profile picture">
+                    </div>
+                    <div class="inner-container">
+                        <h2>Curious of my full work and experience?</h2>
+                        <p>Come check out my resume and portfolio</p>
+                        <div class="button"><a href="images/pdfs/resume.pdf" target="none"><p>Resume</p></a></div>
+                        <div class="button"><a href="images/pdfs/PortfolioPDF.pdf" target="none"><p>Portfolio</p></a></div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+
+customElements.define('my-sub-footer', mySubFooter);
 
 // HTML EXTENSION - FOOTER
 
@@ -31,7 +133,8 @@ class myFooter extends HTMLElement {
                         </div>
                         <div class="pages-links-2">
                             <ul>
-                                <li"><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="aboutMe.html#workExperience">Experience</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
                             </ul>
                         </div>
                     </div>
@@ -64,7 +167,7 @@ class myFooter extends HTMLElement {
                     </div>
                 </div>
                 <div class="copyright">
-                    <p>Copyright © 2024 Nicolas Wong. All Rights Reserved.</p>                    
+                    <p>Copyright © <span id="year"></span> Nicolas Wong. All Rights Reserved.</p>                    
                     <a href="https://www.instagram.com/niccolazzy/" target="none"><img src="images/footer/instagram.png" alt="instagram"/></a>
                     <a href="https://www.linkedin.com/in/nicolas-wong-aa768823b/" target="none"><img src="images/footer/linkedin.png" alt="linkedin"/></a>
                     <a href="https://www.tiktok.com/@niccolazzy?lang=en" target="none"><img src="images/footer/tiktok.png" alt="tiktok"/></a>
@@ -74,58 +177,13 @@ class myFooter extends HTMLElement {
                 </div>
             </footer>
         `;
+        document.getElementById("year").textContent = new Date().getFullYear();
+
     }
+    
 }
 
 customElements.define('my-footer', myFooter);
-
-// HTML EXTENSION - MOBILE NAV
-
-class myMobileNav extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <div class="mobile-menu" id="mobile-menu">
-            <ul class="mobile-menulist" id="mobile-menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
-                <li><a href="images/pdfs/resume.pdf" download="NicolasWong_Resume">Download CV</a></li>
-            </ul>
-        </div>
-        `;
-    }
-}
-
-
-customElements.define('my-mobilenav', myMobileNav);
-
-
-// HTML EXTENSION - NAV
-
-class myNav extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <nav class="header" id="header">
-            <div class="logo" id="logo"><a href="index.html"><img src="images/whiteLogo.png" alt="logo of N and W"></a></div>
-            <ul class="menulist" id="menulist">
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contactMe.html">Contact Me</a></li>
-                <li style="border: 1px solid white; border-radius:8px;"><a href="images/pdfs/resume.pdf" download="NicolasWong_Resume">Download CV</a></li>
-            </ul>
-            <div class="menubutton" id="menubutton"><label class="menu" for="menu">
-                <input type="checkbox" id="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-                </label>
-            </div>
-        </nav>
-        `;
-    }
-}
-
-customElements.define('my-nav', myNav);
 
 // AUTOPLAY VIDEOS
 
@@ -144,10 +202,10 @@ const urls = [
     "isu-admissions.html",
     "volufixion.html",
     "chicken-addiction.html",
-    "dcode.html",
     "maggie-miley.html",
     "boost.html",
-    "isu-casit.html"
+    "isu-casit.html",
+    "meevy.html"
   ];
 const totalPages = urls.length;
 
@@ -213,6 +271,7 @@ function reveal(){
 }
 
 // SCROLL BEHAVIOR - NAVIGATION BAR
+
 const nav = document.querySelector(".header");
 var scrollValue = document.getElementById('scrollValue');
 let lastScrollY = window.scrollY;
