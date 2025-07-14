@@ -261,7 +261,7 @@ p, textarea, input {
 }
 .hero {
     justify-content: center;
-    justify-items: center;
+    justify-items: start;
     width: 100%;
     text-align: center;
     position: relative;
@@ -274,6 +274,8 @@ p, textarea, input {
 }
 .hero.home {
     background: url(images/hero/PortraitsBG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .hero img {
     display: flex;
