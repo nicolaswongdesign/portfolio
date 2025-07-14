@@ -236,7 +236,7 @@ p, textarea, input {
     }
     .mobile-menu li{
         margin-top: 50px;
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
     .mobile-menulist li:has(> a.menuActive), .mobile-menulist .menuActive {
         color: black;
