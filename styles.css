@@ -265,9 +265,6 @@ p, textarea, input {
     width: 100%;
     text-align: center;
     position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     top: 0;
     height: 1010px;
     overflow: hidden;
