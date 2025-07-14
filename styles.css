@@ -200,7 +200,7 @@ p, textarea, input {
     text-align: center;
 }
 .mobile-menulist {
-    line-height: 40px;
+    line-height: 30px;
 }
 @media only screen and (max-width: 900px) {
     .menubutton {
